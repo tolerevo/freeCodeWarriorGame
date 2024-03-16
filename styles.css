@@ -1,155 +1,78 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
-
 :root {
-  --light-gray: #dfdfe2;
-  --dark-blue: #0a0a23;
+  --main-bg-color: #0a0a23;
+  --section-bg-color: #ffffff;
+  --golden-yellow: #feac32
 }
-
 body {
-  background-color: var(--dark-blue);
-  color: var(--light-gray);
+  background-color: var(--main-bg-color)
 }
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 40px 10px;
-}
-
-.freecodecamp-logo {
+.start-screen {
+  background-color: var(--section-bg-color);
   width: 100%;
-  height: 30px;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  padding: 20px;
+  padding-bottom: 5px
 }
-
-h1 {
-  font-size: 2.5rem;
-  margin: 20px 0;
+.main-title {
+  text-align: center
+}
+.instructions {
   text-align: center;
-}
-
-#change-due {
-  text-align: left;
   font-size: 1.2rem;
+  margin: 15px;
+  line-height: 2rem
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.input-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 10px 0 20px;
-}
-
-label {
-  font-size: 18px;
-}
-
-.user-input {
-  height: 30px;
-  padding: 10px;
-  margin: 10px;
-  font-size: 15px;
-}
-
-.price-screen {
-  border: 10px solid #99c9ff;
-  background-color: black;
-  height: 50px;
-  width: 200px;
-  margin-left: -40px;
-  color: white;
-  font-size: 1.2rem;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-#price {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.connector {
-  margin-left: -20px;
-  background-color: #99c9ff;
-  height: 30px;
-  width: 40px;
-}
-
-.top-register {
-  display: flex;
-  justify-content: space-around;
-  border-radius: 35px 35px 0 0;
-  padding-top: 20px;
-  background-color: #99c9ff;
-  height: 250px;
-  width: 325px;
-}
-
-.btns-container {
-  width: 25%;
-}
-
 .btn {
-  border-radius: 10%;
-  border: none;
-  width: 20px;
-  height: 20px;
-  background-color: black;
-}
-
-.check-btn-styles {
   cursor: pointer;
   width: 100px;
-  height: 30px;
   margin: 10px;
   color: #0a0a23;
   font-size: 18px;
-  font-weight: bold;
-  background-color: #feac32;
+  background-color: var(--golden-yellow);
   background-image: linear-gradient(#fecc4c, #ffac33);
-  border-color: #feac32;
-  border-width: 3px;
+  border-color: var(--golden-yellow);
+  border-width: 3px
 }
-
-.cash-drawer-display {
-  font-size: 1.1rem;
-  background-color: white;
-  width: 55%;
-  height: 95%;
-  color: black;
+.btn:hover {
+  background-image: linear-gradient(#ffcc4c, #f89808)
+}
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.checkpoint-screen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  background-color: var(--section-bg-color);
+  border-radius: 20px;
   padding: 10px;
+  display: none
 }
-
-.bottom-register {
-  background-color: #99c9ff;
-  height: 50px;
-  width: 325px;
-  margin-top: 10px;
+#canvas {
+  display: none
 }
-
-.circle {
-  margin: 15px auto;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: black;
+@media (min-width: 768px) {
+  .start-screen {
+    width: 60%;
+    max-width: 700px
+  }
+  .checkpoint-screen {
+    max-width: 300px
+  }
 }
